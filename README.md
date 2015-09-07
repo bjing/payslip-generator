@@ -1,6 +1,6 @@
 # payslip-generator
 
-##What assumptions have I made?
+## What assumptions have I made?
 1. If employee data cannot be parsed correctly from the input file, the application skips the particular line(s) and moves on. However, the problematic line(s) will be printed out to stdout.
 2. The application assumes employee data size is small. No parallel or asynchronous processing is supported.
 3. The application assumes there's only one input file containing employee data.
@@ -16,21 +16,25 @@ $180,001 and over   |   $54,547 plus 45c for each $1 over $180,000
 
 
 
-##How do I run the application?
+## How do I run the application?
 I've only tested this application with java 8. 
 
-All the class files have been compiled already and are place under "bin" subfolder. So to run the application, you need to check out a local copy of the repo and run main.java.RunPayCalculator within the repo's root folder like the following
+All the class files have been compiled already and are placed under "bin" subfolder. So to run the application, you need to check out a local copy of the repo and run main.java.RunPayCalculator within the repo's root folder like the following
 
 ```
 git clone https://github.com/bjing/payslip-generator.git
 cd payslip-generator/
 java -cp bin main.java.RunPayCalculator
+
 ```
+**Note, you can place your own input csv file under payslip-generator/input for testing**
 
 
-##How do I run all the tests?
-Make sure the junit jar is in the class path. then under the root of payslip-generaator, run: 
+## How do I run all the tests?
+Make sure the junit jar is in the class path. then under the root of payslip-generator run: 
+```
 java -cp bin org.junit.runner.JUnitCore test.java.TestAll
+```
 
 For example, on my own GNU/Linux machine, I run the tests like this: 
 ```
