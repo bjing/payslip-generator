@@ -1,1 +1,49 @@
 # payslip-generator
+
+##What assumptions have I made?
+1. Since I cannot access the link (http://www.ato.gov.au/content/12333.htm) provided in the specification and I'm not quite clear where the actual table is on the ATO site, I used the following table included in the spec. The table is coded in a file called tax_table.csv in the resources folder.
+
+Salary range        |   Tax info
+------------------  |   -----------------------------------------
+0 - $18,200         |   Nil
+$18,201 - $37,000   |   19c for each $1 over $18,200
+$37,001 - $80,000   |   $3,572 plus 32.5c for each $1 over $37,000
+$80,001 - $180,000  |   $17,547 plus 37c for each $1 over $80,000
+$180,001 and over   |   $54,547 plus 45c for each $1 over $180,000
+
+2. The application assumes there's only one input file containing employee data.
+3. If employee data cannot be parsed correctly from the input file, the application skips the particular line(s) and moves on. However, the problematic line(s) will be printed out to stdout.
+4. The application assumes employee data size is small. No parallel or asynchronous processing is supported.
+
+
+
+##How do I run the application?
+I've only tested this application with java 8. 
+
+All the class files have been compiled already and are place under "bin" subdirectory. So to run the application, you need to check out a local copy of the repo and run main.java.RunPayCalculator within the repo's root directory like the following
+
+```
+git clone https://github.com/bjing/payslip-generator.git
+cd payslip-generator/
+java -cp bin main.java.RunPayCalculator
+```
+
+
+##How do I run all the tests?
+Make sure the junit jar is in the class path. then under the root of payslip-generaator, run: 
+java -cp bin org.junit.runner.JUnitCore test.java.TestAll
+
+For example, on my own GNU/Linux machine, I run the tests like this: 
+```
+brian@brian-desktop ~/payslip-generator$ java -cp bin:/usr/share/java/junit4.jar org.junit.runner.JUnitCore test.java.TestAll
+```
+
+JUnit produces the following result:
+```
+JUnit version 4.11
+........
+Time: 0.023
+
+OK (8 tests)
+```
+
