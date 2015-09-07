@@ -27,7 +27,7 @@ cd payslip-generator/
 java -cp bin main.java.RunPayCalculator
 
 ```
-**Note, you can place your own input csv file under payslip-generator/input for testing**
+**Note, you can place your own input csv file under payslip-generator/input for testing, but make sure it's named "input.csv"**
 
 
 ## How do I run all the tests?
