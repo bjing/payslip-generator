@@ -42,7 +42,7 @@ public class TaxTable {
 	
 	/**
 	 * Set taxtable directly
-	 * @param taxTable
+	 * @param taxTable the ATO tax tables in a navigable map
 	 */
 	public void setTaxTable(NavigableMap<Double,List<Double>> taxTable) {
 		this.taxTable = taxTable;
@@ -50,7 +50,7 @@ public class TaxTable {
 	
 	/**
 	 * Get tax table directly
-	 * @return
+	 * @return the ATO tax tables in a navigable map
 	 */
 	public NavigableMap<Double,List<Double>> getTaxTable() {
 		return this.taxTable;

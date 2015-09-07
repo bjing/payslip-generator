@@ -12,6 +12,13 @@ public class Employee {
     private double salary;
     private double superRate;
     
+    /**
+     * Class constructor
+     * @param firstName employee's first name
+     * @param lastName employee's first name
+     * @param salary employee's annual salary
+     * @param superRate employee's super rate
+     */
     public Employee(String firstName, String lastName, int salary, double superRate) {
     	this.firstName = firstName;
     	this.lastName = lastName;
@@ -35,6 +42,9 @@ public class Employee {
     	return superRate;
     }
     
+    /**
+     * String representation of employee's basic info in CSV format
+     */
     public String toString() {
     	return firstName + "," + lastName + "," + salary + "," + superRate;
     }
