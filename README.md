@@ -17,8 +17,13 @@ $180,001 and over   |   $54,547 plus 45c for each $1 over $180,000
 
 
 ## How do I run the application?
+### Java version
 I've only tested this application with java 8. 
 
+### Input
+You can place your own input csv files under payslip-generator/input. The application will try to load all input files under this folder.
+
+### Run the application
 All the class files have been compiled already and are placed under "bin" subfolder. So to run the application, you need to check out a local copy of the repo and run main.java.RunPayCalculator within the repo's root folder like the following
 
 ```
@@ -27,7 +32,10 @@ cd payslip-generator/
 java -cp bin main.java.RunPayCalculator
 
 ```
-**Note, you can place your own input csv file under payslip-generator/input for testing, but make sure it's named "input.csv"**
+
+### Output
+Output will be generated at payslip-generator/output/output.csv. Please note each time the application runs, the existing output.csv file will be overwritten.
+
 
 
 ## How do I run all the tests?
